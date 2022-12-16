@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conduct-box{
+            display: grid;
+            grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+
+        }
+        .result-box{
+            border:1px solid #666;
+            padding:20px;
+            margin-top: 10px;
+        }
+        textarea{
+            width:100%;
+            height: 400px;
+            padding:8px;
+        }
+        .button{
+            border-radius:4px;
+            border:1px solid #0079cd;
+            background: #0079cd;
+            color:#fff;
+            width:100px;
+            line-height:24px;
+            text-align: center;
+            cursor:pointer;
+        }
+        #tip{
+            color:red;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="conduct-box">
+        <div>
+            <div class="title">
+                将源json粘贴至此处，单机按钮生成纯文本
+            </div>
+            <textarea id="old-json"></textarea>
+            <div class="button" id="generate-btn">生成纯文本</div>
+        </div>
+        <div>
+            <div class="title">
+                将翻译好的文本粘贴至此处，点击按钮生成翻译文本。
+            </div>
+            <textarea  id="new-json"></textarea>
+            <div class="button" id="rebuild-btn">生成json</div>
+        </div>
+    </div>
+    <div id="tip"></div>
+    <div class="result-box">
+       
+        <div id="result">
+            请先粘贴至输入框1后生成纯文本
+        </div>
+    </div>
+    <script src="./index.js"></script>
+
+</body>
+</html>
